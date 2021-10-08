@@ -14,27 +14,16 @@ public class MyMain {
 
     // Finds the second largest number in an array
     public static int secondLargest(int[] arr) {
-            int u = 0;
-            int j = 0;
-            int index = 0;
-            for(int i = 0; i<arr.length; i++){
-                u = arr[i];
-                if (u>j);
-                j=u;
-                index=i;
-            }
-            int p=0;
-        int[] copy = new int[arr.length - 1];
-        for(int i = 0; i<copy.length; i++){
-                if (i != index) {
-                     copy[p++] += arr[i];}
-        }for(int i = 0; i<copy.length; i++) {
-            u = copy[i];
-            if (u > j) ;
-            j = u;
+        int temporary = 0;
+        for(int i = 0; i<arr.length; i++ ){
+            for(int j = i+1; j<arr.length; j++){
 
-        }return j;
-    }
+                if(arr[i]>arr[j]){
+                    temporary = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temporary;
+    }}}
+            return arr[arr.length-2];}
 
     // This method is given a word, and it checks to see
     // if it was spelled correctly. The method only considers
